@@ -37,8 +37,8 @@ where `Incident Date` Like '%-04-04' -- IF Month 4 had incidents, then logically
 -- Q4 Return all incidents on either Conor or Brooke's birthday where the Station Area is greater than 20.
 -- What is the "Station Area" for the first fire call in this table?
 
-select count(`Incident Number`) as incidents from fireIncidents
-where `Incident Date` = "04/04/2016" 
+select `Station Area` from fireIncidents
+where `Incident Date` = "2016-04-04" or `Incident Date` = "2016-09-27" and `Station Area`> 20
 
 -- Q5 How many incidents were on Conor's birthday in 2016?
 
